@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="numGame.css"/>
+
+    <title>What's the Magic Number?</title>
+
+</head>
+
+<body onload="init()">
+
+    <div id="container">
+
+    <div class="panel">
+        <h2>I'm thinking of a number <br>between 1 and 100!</h2>
+        <h3>Dare to guess the magic number?</h3> <hr color="#0A0908">
+        <p>Select Difficulty</p>
+        <button id="easy" onclick="easyMode()" class="">Easy (Default)</button>
+        <button id="hard" onclick="hardMode()"class="">Hard</button>
+        <button id="newGame" onclick="newGame()">NEW GAME</button>
+    </div>
+
+    <div class="panel">
+        <h3 id="response">Take your best shot here &amp; press enter.</h3>
+        <input type="number" id="inputBox" onchange="compareGuess()" autocomplete="off"> 
+        <p>Number of previous attempts: <span id="attempts"></span></p>
+    </div>
+
+    <div class="panel">
+        <p>You missed the magic number:</p>
+        <p id="guessLog"></p>
+
+    </div>
+
+    <div class="panel">
+            <p>Credit: Image by <a href="https://pixabay.com/users/GDJ-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1817584">Gordon Johnson</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1817584">Pixabay</a></p>
+    </div>
+
+    </div>
+
+    <script src="numGame.js"></script>
+
+</body>
+
+</html>
